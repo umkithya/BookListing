@@ -23,27 +23,23 @@ import '../page/profilepage.dart';
                 transitionsBuilder: TransitionsBuilders.noTransition,
                 path: 'popular',
                 page: PopularPage,
-                initial: true),
+                initial: true,
+                durationInMilliseconds: 0),
             CustomRoute(
                 transitionsBuilder: TransitionsBuilders.noTransition,
                 path: 'most-reading',
-                page: MostReadingPage),
+                page: MostReadingPage,
+                durationInMilliseconds: 0),
             RedirectRoute(path: '*', redirectTo: ''),
-
-            // AutoRoute(path: ':bookId', page: BookDetailsPage),
-            // RedirectRoute(path: '*', redirectTo: ''),
           ],
         ),
-        // our BooksRouter has been moved into the children field
+
         AutoRoute(
           path: "favorite",
           name: "FavoriteRouter",
           page: EmptyRouterPage,
           children: [
             AutoRoute(path: '', page: FavoritePage),
-
-            // AutoRoute(path: ':bookId', page: BookDetailsPage),
-            // RedirectRoute(path: '*', redirectTo: ''),
             RedirectRoute(path: '*', redirectTo: ''),
           ],
         ),

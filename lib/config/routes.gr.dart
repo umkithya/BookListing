@@ -47,6 +47,7 @@ class AppRouter extends _i3.RootStackRouter {
           routeData: routeData,
           child: const _i4.PopularPage(),
           transitionsBuilder: _i3.TransitionsBuilders.noTransition,
+          durationInMilliseconds: 0,
           opaque: true,
           barrierDismissible: false);
     },
@@ -59,6 +60,7 @@ class AppRouter extends _i3.RootStackRouter {
           routeData: routeData,
           child: _i5.MostReadingPage(key: args.key, author: args.author),
           transitionsBuilder: _i3.TransitionsBuilders.noTransition,
+          durationInMilliseconds: 0,
           opaque: true,
           barrierDismissible: false);
     },
