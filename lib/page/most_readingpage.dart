@@ -11,7 +11,7 @@ class MostReadingPage extends StatelessWidget {
       children: [
         Center(
           child: author == null
-              ? Text("Welcome to Most Reading Book")
+              ? Text("Welcome to Most Reading Book List")
               : Container(),
         ),
         SizedBox(

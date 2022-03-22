@@ -14,31 +14,34 @@ class BooksPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text("Welcome to Book List"),
-          Row(
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              RaisedButton(
-                onPressed: () {
-                  // context.router.push(BookDetailsRoute(bookId: 15)); //pageroute
-                  // context.router.pushNamed("books:15"); path
-                  context.router.pushNamed("popular"); //path
-                },
-                child: Text("Popular Book"),
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              RaisedButton(
-                onPressed: () {
-                  // context.router
-                  //     .push(MostReadingRoute(authorName: "John")); //pageroute
-                  context.router.pushNamed("most-reading"); //path
-                },
-                child: Text("Most Reading Book"),
-              )
-            ],
+          //Text("Welcome to Book List"),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Row(
+              //crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RaisedButton(
+                  onPressed: () {
+                    // context.router.push(BookDetailsRoute(bookId: 15)); //pageroute
+                    // context.router.pushNamed("books:15"); path
+                    context.router.pushNamed("popular"); //path
+                  },
+                  child: Text("Popular Book"),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    // context.router
+                    //     .push(MostReadingRoute(authorName: "John")); //pageroute
+                    context.router.pushNamed("most-reading"); //path
+                  },
+                  child: Text("Most Reading Book"),
+                )
+              ],
+            ),
           ),
           Expanded(child: AutoRouter()),
         ],
